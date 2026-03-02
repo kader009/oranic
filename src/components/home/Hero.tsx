@@ -4,13 +4,13 @@ import Container from '../ui/Container';
 
 const Hero = () => {
   return (
-    <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden bg-cream">
+    <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-cream">
       {/* Background Image */}
       <Image
-        src="/assets/images/hero.png"
+        src="/assets/images/banner.svg"
         alt="Natural Beauty"
         fill
-        className="object-cover object-bottom"
+        className="object-cover"
         priority
       />
 
