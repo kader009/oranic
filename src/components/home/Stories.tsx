@@ -8,7 +8,7 @@ const Stories = () => {
     <section className="py-20 bg-white">
       <Container>
         <div className="flex justify-between items-end mb-12">
-          <h2 className="text-[56px] font-medium leading-tight text-[#1A1A1A]">
+          <h2 className="text-[56px] font-medium leading-tight text-[#222222]">
             Our Stories
           </h2>
           <div className="flex gap-[10px]">
@@ -50,7 +50,7 @@ const Stories = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {blogs.map((blog, i) => (
             <div key={i} className="group cursor-pointer">
-              <div className="w-full h-[446px] rounded-[32px] overflow-hidden mb-6">
+              <div className="w-[410px] h-[446px] rounded-[32px] overflow-hidden mb-6">
                 <img
                   src={blog.image}
                   alt={blog.title}
@@ -65,13 +65,13 @@ const Stories = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-[#1A1A1A] group-hover:text-primary transition-colors mb-4 line-clamp-2">
+              <h3 className="text-[32px] font-regular text-[#222222] group-hover:text-primary transition-colors mb-4 line-clamp-2">
                 {blog.title}
               </h3>
 
               <Link
                 href="#"
-                className="flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all duration-300"
+                className="flex items-center gap-1 text-primary font-medium text-[24px] hover:gap-2 transition-all duration-300"
               >
                 Read More
                 <ChevronRight size={18} />

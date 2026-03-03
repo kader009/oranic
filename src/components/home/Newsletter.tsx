@@ -1,27 +1,22 @@
 import Image from 'next/image';
+import { ChevronRight, ArrowUpRight } from 'lucide-react';
 import Container from '../ui/Container';
 
 const Newsletter = () => {
   return (
-    <section className="py-20 bg-cream">
+    <section className="pt-20 bg-cream">
       <Container>
-        <div className="bg-primary rounded-[3rem] overflow-hidden flex flex-col md:flex-row items-center shadow-2xl">
+        <div className="flex flex-col lg:flex-row items-center gap-6 justify-center mb-[80px]">
           {/* Left Content */}
-          <div className="flex-1 p-8 md:p-16 text-white text-center md:text-left">
-            <span className="text-secondary font-bold uppercase tracking-[.2em] text-sm mb-4 block animate-bounce-slow">
-              Special Offer
-            </span>
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8">
-              Exclusive shadows <br /> beauty with skin care
-            </h2>
+          <div className="w-full lg:w-[628px] h-[400px] lg:h-[684px] bg-primary rounded-[40px] px-[48px] py-[133px] text-white text-center md:text-left flex flex-col justify-center">
+            <p className="text-[24px] font-regular">Expert skin care</p>
+            <h1 className="text-[56px] font-bold mb-8">
+              Redefine timeless beauty with our care
+            </h1>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto md:mx-0">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-8 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary/50 transition-all font-medium"
-              />
-              <button className="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-secondary transition-all active:scale-95 shadow-xl">
-                Subscribe
+              <button className="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-secondary transition-all active:scale-95 shadow-xl cursor-pointer whitespace-nowrap flex items-center justify-center gap-2">
+                Shop Now
+                <ChevronRight size={20} />
               </button>
             </div>
             <div className="mt-8 flex items-center justify-center md:justify-start gap-4">
@@ -29,28 +24,69 @@ const Newsletter = () => {
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full border-2 border-primary overflow-hidden bg-gray-200 shadow-lg"
+                    className="w-[61px] h-[61px] rounded-full border-2 border-white overflow-hidden bg-gray-100 shadow-lg"
                   >
-                    <img src={`https://i.pravatar.cc/100?u=${i}`} alt="User" />
+                    <Image
+                      src={`/assets/images/Ellipse${i}.svg`}
+                      alt={`User ${i}`}
+                      width={61}
+                      height={61}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 ))}
+                <div className="w-[61px] h-[61px] rounded-full border-2 border-white bg-white flex items-center justify-center shadow-lg text-primary">
+                  <ArrowUpRight size={28} strokeWidth={1.5} />
+                </div>
               </div>
-              <p className="text-xs text-white/80 font-bold">
-                Over 2,500 subscribers already joined us!
+              <p className="flex flex-col">
+                <span className="font-bold text-[40px]">12k+</span>{' '}
+                <span className="text-[20px] font-medium">
+                  Customers Rating
+                </span>
               </p>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="w-full md:w-1/2 aspect-square md:aspect-auto self-stretch relative overflow-hidden">
+          <div className="w-full lg:w-[628px] h-[400px] lg:h-[684px] rounded-[40px] overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1590159763121-7f9fd31219af?auto=format&fit=crop&q=80&w=800"
+              src="/assets/images/newsimage.svg"
               alt="Newsletter Promo"
-              className="w-full h-full object-cover transition-transform duration-[20s] hover:scale-125"
+              className="w-full h-full object-cover"
             />
-            {/* Decorative Elements */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-transparent pointer-events-none" />
           </div>
+        </div>
+
+        <div className="py-[40px] flex justify-center gap-6">
+          <Image
+            src="/assets/images/news1.svg"
+            width={302}
+            height={337}
+            alt="Newsletter Promo"
+            className="w-full h-full object-cover rounded-[24px]"
+          />
+          <Image
+            src="/assets/images/news2.svg"
+            width={302}
+            height={337}
+            alt="Newsletter Promo"
+            className="w-full h-full object-cover rounded-[24px]"
+          />
+          <Image
+            src="/assets/images/news3.svg"
+            width={302}
+            height={337}
+            alt="Newsletter Promo"
+            className="w-full h-full object-cover rounded-[24px]"
+          />
+          <Image
+            src="/assets/images/news4.svg"
+            width={302}
+            height={337}
+            alt="Newsletter Promo"
+            className="w-full h-full object-cover rounded-[24px]"
+          />
         </div>
       </Container>
     </section>
