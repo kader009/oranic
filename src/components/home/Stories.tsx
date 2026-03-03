@@ -1,65 +1,80 @@
 import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 import Container from '../ui/Container';
+import { blogs } from '@/src/data/blogsData';
 
 const Stories = () => {
-  const blogs = [
-    {
-      title: 'The morning routine for glowing skin',
-      date: 'Oct 23, 2024',
-      image:
-        'https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?auto=format&fit=crop&q=80&w=400',
-    },
-    {
-      title: 'Natural oils vs synthetic serums',
-      date: 'Oct 20, 2024',
-      image:
-        'https://images.unsplash.com/photo-1552046122-03184de85e08?auto=format&fit=crop&q=80&w=400',
-    },
-    {
-      title: 'Choosing the right cleanser for you',
-      date: 'Oct 15, 2024',
-      image:
-        'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=400',
-    },
-  ];
-
   return (
     <section className="py-20 bg-white">
       <Container>
         <div className="flex justify-between items-end mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Our Stories</h2>
-          <Link
-            href="/blogs"
-            className="text-primary font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity"
-          >
-            Read More
-          </Link>
+          <h2 className="text-[56px] font-medium leading-tight text-[#1A1A1A]">
+            Our Stories
+          </h2>
+          <div className="flex gap-[10px]">
+            <button className="w-[48px] h-[48px] rounded-[35px] border border-[#E5E5E5] bg-transparent text-[#1A1A1A] flex items-center justify-center cursor-pointer hover:border-primary hover:text-primary transition-all duration-300 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+                />
+              </svg>
+            </button>
+            <button className="w-[48px] h-[48px] rounded-[35px] border border-[#E5E5E5] bg-transparent text-[#1A1A1A] flex items-center justify-center cursor-pointer hover:border-primary hover:text-primary transition-all duration-300 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {blogs.map((blog, i) => (
             <div key={i} className="group cursor-pointer">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-6 relative">
+              <div className="w-full h-[446px] rounded-[32px] overflow-hidden mb-6">
                 <img
                   src={blog.image}
                   alt={blog.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold text-gray-900 shadow-lg">
-                  New
-                </div>
               </div>
-              <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">
-                {blog.date}
-              </p>
-              <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors leading-tight mb-4">
+
+              <div className="flex items-center gap-[10px] mb-3">
+                <div className="w-3 h-3 bg-[#222222] rounded-full" />
+                <span className="text-[16px] font-semibold text-[#222222]">
+                  {blog.category}
+                </span>
+              </div>
+
+              <h3 className="text-xl md:text-2xl font-bold text-[#1A1A1A] group-hover:text-primary transition-colors mb-4 line-clamp-2">
                 {blog.title}
               </h3>
+
               <Link
                 href="#"
-                className="text-sm font-bold border-b border-gray-900 hover:text-primary hover:border-primary transition-all inline-block mt-2"
+                className="flex items-center gap-1 text-primary font-bold hover:gap-2 transition-all duration-300"
               >
-                Read Article
+                Read More
+                <ChevronRight size={18} />
               </Link>
             </div>
           ))}
