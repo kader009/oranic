@@ -4,24 +4,24 @@ import ProductCard from '../ui/ProductCard';
 import { products } from '@/src/data/productData';
 
 const PopularProducts = () => {
-  const filters = ['Free care', 'Body Care', 'Hair Care', 'Organic'];
+  const filters = ['Free Care', 'Body Care', 'Hair Care', 'Organic'];
 
   return (
     <section className="py-20 bg-white">
       <Container>
         <div className="mb-12">
-          <h2 className="text-[48px] md:text-[56px] font-bold mb-8 leading-tight">
+          <h1 className="text-[56px] font-medium mb-8 leading-tight">
             Popular Products
-          </h2>
+          </h1>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-[10px]">
               {filters.map((filter, i) => (
                 <button
                   key={i}
-                  className={`px-8 py-3 rounded-full text-base font-bold transition-all cursor-pointer ${
+                  className={`w-[132px] h-[48px] rounded-[50px] text-[24px] font-medium transition-all cursor-pointer flex items-center justify-center whitespace-nowrap ${
                     i === 0
-                      ? 'bg-primary text-white shadow-md'
-                      : 'bg-white border border-[#E5E5E5] text-[#1A1A1A] hover:border-primary hover:text-primary'
+                      ? 'bg-primary text-white'
+                      : 'bg-[#F7F7F7] text-[#1A1A1A] hover:bg-primary/10'
                   }`}
                 >
                   {filter}
@@ -29,17 +29,17 @@ const PopularProducts = () => {
               ))}
             </div>
             <Link
-              href="/shop"
-              className="text-primary font-bold border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity w-fit"
+              href="#"
+              className="w-[153px] h-[66px] flex items-center justify-center rounded-[44px] border border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all duration-300 text-[28px]"
             >
               View All
             </Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product, i) => (
-            <ProductCard key={i} {...product} />
+            <ProductCard key={i} {...product} showTag={i % 2 === 0} />
           ))}
         </div>
       </Container>
