@@ -1,62 +1,64 @@
-'use client'
-import { Plus, Minus } from 'lucide-react';
+'use client';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 import Container from '../ui/Container';
+import { faqs } from '@/src/data/faqsData';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs = [
-    {
-      q: 'Is it suitable for all skin types?',
-      a: 'Yes, our products are formulated with gentle botanical extracts that work harmoniously with all skin types, including sensitive skin.',
-    },
-    {
-      q: 'How long until I see results?',
-      a: 'Most users report a noticeable difference in hydration and glow within 7-14 days of consistent use.',
-    },
-    {
-      q: 'Are your products 100% natural?',
-      a: 'We use 98% naturally derived ingredients, with the remaining 2% being safe preservatives to ensure product stability.',
-    },
-    {
-      q: 'Do you offer international shipping?',
-      a: 'Yes, we ship to over 50 countries worldwide. Shipping times vary by location.',
-    },
-  ];
-
   return (
-    <section className="py-20 bg-cream/10">
-      <Container className="grid lg:grid-cols-2 gap-16 items-center">
-        <div>
+    <section className="py-20">
+      <Container className="flex flex-col lg:flex-row justify-between items-start gap-10">
+        <div className="w-full lg:w-[652px] lg:h-[788px] flex flex-col">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             We've got the answers you need
           </h2>
           <p className="text-gray-600 mb-10">
-            Frequently asked questions about our products and services.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
 
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <div key={i} className="border-b border-gray-200 pb-4">
+              <div
+                key={i}
+                className={`transition-all duration-300 rounded-[12px] w-full lg:w-[652px] ${
+                  openIndex === i
+                    ? 'min-h-[136px] bg-cream px-6 flex flex-col justify-center mb-4'
+                    : 'bg-transparent mb-4'
+                }`}
+              >
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
                   className="w-full flex items-center justify-between text-left py-4 group"
                 >
                   <span
-                    className={`text-lg font-bold transition-colors ${openIndex === i ? 'text-primary' : 'text-gray-900 group-hover:text-primary'}`}
+                    className={`text-lg font-bold transition-colors ${
+                      openIndex === i
+                        ? 'text-[#1A1A1A]'
+                        : 'text-gray-900 group-hover:text-primary'
+                    }`}
                   >
-                    {faq.q}
+                    {faq.question}
                   </span>
                   {openIndex === i ? (
-                    <Minus size={20} className="text-primary" />
+                    <ChevronUp
+                      size={24}
+                      className="text-primary"
+                      strokeWidth={1.5}
+                    />
                   ) : (
-                    <Plus size={20} className="text-gray-400" />
+                    <ChevronDown
+                      size={24}
+                      className="text-gray-400"
+                      strokeWidth={1.5}
+                    />
                   )}
                 </button>
                 {openIndex === i && (
-                  <div className="pb-4 text-gray-600 leading-relaxed animate-fade-in">
-                    {faq.a}
+                  <div className="pb-6 text-gray-600 leading-relaxed animate-fade-in">
+                    {faq.answer}
                   </div>
                 )}
               </div>
@@ -64,9 +66,9 @@ const FAQ = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
+        <div className="hidden lg:block relative aspect-4/5 rounded-[3rem] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1556228578-0d8db6709159?auto=format&fit=crop&q=80&w=600"
+            src="/assets/images/faq.svg"
             alt="FAQ Illustration"
             className="w-full h-full object-cover"
           />

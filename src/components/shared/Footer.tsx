@@ -141,21 +141,7 @@ const Footer = () => {
           </h1>
         </div>
 
-        {/* Bottom Section */}
-        <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-white/40 text-xs font-medium">
-            © 2024 Oranic Skincare. All rights reserved. Built with ❤️ for
-            Radiant Skin.
-          </p>
-          <div className="flex gap-8 text-xs font-bold uppercase tracking-widest text-white/40">
-            <Link href="#" className="hover:text-white transition-colors">
-              Sitemap
-            </Link>
-            <Link href="#" className="hover:text-white transition-colors">
-              Cookies
-            </Link>
-          </div>
-        </div>
+        
       </Container>
     </footer>
   );

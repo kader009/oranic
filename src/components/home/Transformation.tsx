@@ -5,7 +5,7 @@ const Transformation = () => {
   return (
     <section className="py-20 bg-white overflow-hidden">
       <Container>
-        <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl group">
+        <div className="relative aspect-video md:aspect-21/9 rounded-[3rem] overflow-hidden shadow-2xl group">
           <Image
             src="/assets/images/transformation.png"
             alt="Skin Transformation"
