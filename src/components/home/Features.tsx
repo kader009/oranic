@@ -1,45 +1,48 @@
 import Image from 'next/image';
-import { Leaf, Award, FlaskConical, ShieldCheck } from 'lucide-react';
-import Container from '../ui/Container';
+import { ArrowUpRight } from 'lucide-react';
 
 const Features = () => {
   const features = [
     {
-      icon: <Leaf className="text-primary" size={24} />,
-      title: 'Cruelty-free',
-      desc: 'Our products are never tested on animals.',
+      icon: '🌿',
+      title: 'Clean Ingredients',
+      desc: 'No parabens, sulfates, or harsh chemicals',
     },
     {
-      icon: <Award className="text-primary" size={24} />,
-      title: 'Name-brand',
-      desc: 'Trust in our award winning formulations.',
+      icon: '🔬',
+      title: 'Science-Backed',
+      desc: 'Clinically tested & dermatologist approved',
     },
     {
-      icon: <FlaskConical className="text-primary" size={24} />,
-      title: 'Formula',
-      desc: 'Scientifically backed botanical extracts.',
+      icon: '♻️',
+      title: 'Sustainable',
+      desc: 'Eco-conscious packaging & sourcing',
     },
     {
-      icon: <ShieldCheck className="text-primary" size={24} />,
-      title: 'Non-toxic',
-      desc: 'Safe for you and the planet.',
+      icon: '🐰',
+      title: 'Cruelty-Free',
+      desc: 'Never tested on animals',
     },
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <Container className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="bg-white overflow-hidden">
+      <div className="flex justify-end items-center gap-[40px]">
         {/* Left Side: Content */}
-        <div>
+        <div className="w-[628px] h-[894px] flex flex-col justify-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-8">
-            Real ingredients, <br /> inspired by nature.
+            Rooted in science.
+            <br />
+            Inspired by nature.
           </h2>
 
           <div className="grid sm:grid-cols-2 gap-y-10 gap-x-8">
             {features.map((f, i) => (
               <div key={i} className="flex flex-col gap-4">
-                <div className="w-12 h-12 bg-secondary flex items-center justify-center rounded-xl">
-                  {f.icon}
+                <div className="w-[52px] h-[54px] bg-cream flex items-center justify-center rounded-[8px]">
+                  <span className="w-[28px] h-[34px] flex justify-center items-center">
+                    {f.icon}
+                  </span>
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{f.title}</h3>
@@ -51,21 +54,45 @@ const Features = () => {
             ))}
           </div>
 
-          <button className="mt-12 bg-primary text-white px-10 py-4 rounded-full font-bold hover:shadow-xl hover:shadow-primary/20 transition-all active:scale-95">
-            Learn More
-          </button>
+          <div className="mt-12 flex items-center gap-8">
+            <button className="bg-primary text-white w-fit px-10 py-4 rounded-full font-bold hover:shadow-xl hover:shadow-primary/20 transition-all active:scale-95">
+              Learn More
+            </button>
+
+            <div className="flex items-center">
+              <div className="flex -space-x-4">
+                {[1, 2, 3, 4].map((i) => (
+                  <div
+                    key={i}
+                    className="w-[50px] h-[50px] rounded-full border-2 border-white overflow-hidden bg-gray-100 shadow-sm"
+                  >
+                    <Image
+                      src={`/assets/images/Ellipse${i}.svg`}
+                      alt={`User ${i}`}
+                      width={50}
+                      height={50}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+                <div className="w-[50px] h-[50px] rounded-full border-2 border-white bg-primary flex items-center justify-center shadow-sm text-white">
+                  <ArrowUpRight size={20} strokeWidth={2} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Right Side: Image */}
-        <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
+        <div className="relative w-[692px] h-[894px] overflow-hidden shrink-0">
           <Image
-            src="/assets/images/woman_nature.png"
+            src="/assets/images/feature.svg"
             alt="Inspired by Nature"
             fill
             className="object-cover"
           />
         </div>
-      </Container>
+      </div>
     </section>
   );
 };
