@@ -4,6 +4,7 @@ import Marquee from '@/src/components/home/Marquee';
 import Features from '@/src/components/home/Features';
 import Categories from '@/src/components/home/Categories';
 import PopularProducts from '@/src/components/home/PopularProducts';
+import Makeup from '@/src/components/home/Makeup';
 import Reviews from '@/src/components/home/Reviews';
 import Transformation from '@/src/components/home/Transformation';
 import FAQ from '@/src/components/home/FAQ';
@@ -20,6 +21,7 @@ export default function Home() {
       <Features />
       <Categories />
       <PopularProducts />
+      <Makeup />
       <Reviews />
       <Transformation />
       <FAQ />
