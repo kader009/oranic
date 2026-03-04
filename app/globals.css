@@ -13,7 +13,18 @@
   --color-primary: #607315;
   --color-secondary: #e2e8d2;
   --color-accent: #b2bd8e;
-  --color-cream: #FAFFE5;
+  --color-cream: #faffe5;
+
+  --animate-marquee: marquee 120s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,14 +35,6 @@
 }
 
 @layer utilities {
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
   @keyframes fade-in-up {
     0% {
       opacity: 0;
@@ -53,9 +56,6 @@
   }
   .animate-bounce-slow {
     animation: bounce-slow 4s ease-in-out infinite;
-  }
-  .animate-marquee {
-    animation: marquee 20s linear infinite;
   }
   .animate-fade-in-up {
     animation: fade-in-up 0.8s ease-out forwards;

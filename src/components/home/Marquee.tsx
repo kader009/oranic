@@ -1,23 +1,26 @@
+import Image from 'next/image';
+
 const Marquee = () => {
-  const items = [
-    'Skin Care',
-    'Self Care',
-    'Organic Life',
-    'Natural Glow',
-    'Eco Friendly',
-  ];
+  const items = ['Skin Care'];
 
   return (
-    <div className="bg-primary text-white py-4 overflow-hidden whitespace-nowrap border-y border-white/10">
-      <div className="flex animate-marquee">
-        {[...Array(4)].map((_, i) => (
-          <div key={i} className="flex shrink-0 items-center">
+    <div className="bg-primary text-white py-4 overflow-hidden whitespace-nowrap border-y border-white/10 h-[101px]">
+      <div className="flex animate-marquee gap-12 w-max">
+        {[...Array(14)].map((_, i) => (
+          <div key={i} className="flex shrink-0 items-center gap-12">
             {items.map((item, idx) => (
               <span
                 key={idx}
-                className="flex items-center mx-8 font-bold uppercase tracking-widest text-sm"
+                className="flex items-center gap-12 font-medium uppercase tracking-widest text-[40px]"
               >
-                <span className="w-2 h-2 bg-white rounded-full mr-4"></span>
+                <div className="relative w-[61px] h-[61px] shrink-0">
+                  <Image
+                    src="/assets/images/marque.svg"
+                    alt="Marquee Icon"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 {item}
               </span>
             ))}

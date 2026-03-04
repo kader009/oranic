@@ -1,30 +1,8 @@
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
+import { features } from '@/src/data/featureData';
 
 const Features = () => {
-  const features = [
-    {
-      icon: '🌿',
-      title: 'Clean Ingredients',
-      desc: 'No parabens, sulfates, or harsh chemicals',
-    },
-    {
-      icon: '🔬',
-      title: 'Science-Backed',
-      desc: 'Clinically tested & dermatologist approved',
-    },
-    {
-      icon: '♻️',
-      title: 'Sustainable',
-      desc: 'Eco-conscious packaging & sourcing',
-    },
-    {
-      icon: '🐰',
-      title: 'Cruelty-Free',
-      desc: 'Never tested on animals',
-    },
-  ];
-
   return (
     <section className="bg-white overflow-hidden">
       <div className="flex justify-end items-center gap-[40px]">
@@ -64,7 +42,7 @@ const Features = () => {
                 {[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="w-[50px] h-[50px] rounded-full border-2 border-white overflow-hidden bg-gray-100 shadow-sm"
+                    className="w-[50px] h-[50px] rounded-full border-2 border-primary overflow-hidden"
                   >
                     <Image
                       src={`/assets/images/Ellipse${i}.svg`}
@@ -75,7 +53,7 @@ const Features = () => {
                     />
                   </div>
                 ))}
-                <div className="w-[50px] h-[50px] rounded-full border-2 border-white bg-primary flex items-center justify-center shadow-sm text-white">
+                <div className="w-[50px] h-[50px] rounded-full border-2 border-primary bg-primary flex items-center justify-center text-white">
                   <ArrowUpRight size={20} strokeWidth={2} />
                 </div>
               </div>
