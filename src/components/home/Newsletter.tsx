@@ -21,14 +21,14 @@ const Newsletter = () => {
             </div>
             <div className="mt-8 flex items-center justify-center md:justify-start gap-4">
               <div className="flex -space-x-4">
-                {[1, 2, 3, 4].map((i) => (
+                {[1, 2, 3, 4].map((avatarIndex) => (
                   <div
-                    key={i}
+                    key={avatarIndex}
                     className="w-[61px] h-[61px] rounded-full border-2 border-white overflow-hidden bg-gray-100 shadow-lg"
                   >
                     <Image
-                      src={`/assets/images/Ellipse${i}.svg`}
-                      alt={`User ${i}`}
+                      src={`/assets/images/Ellipse${avatarIndex}.svg`}
+                      alt={`User ${avatarIndex}`}
                       width={61}
                       height={61}
                       className="w-full h-full object-cover"

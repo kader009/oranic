@@ -15,11 +15,11 @@ const PopularProducts = () => {
           </h1>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="flex flex-wrap gap-[10px]">
-              {filters.map((filter, i) => (
+              {filters.map((filter, index) => (
                 <button
-                  key={i}
+                  key={index}
                   className={`w-[132px] h-[48px] rounded-[50px] text-[24px] font-medium transition-all cursor-pointer flex items-center justify-center whitespace-nowrap ${
-                    i === 0
+                    index === 0
                       ? 'bg-primary text-white'
                       : 'bg-[#F7F7F7] text-[#1A1A1A] hover:bg-primary/10'
                   }`}
@@ -38,8 +38,8 @@ const PopularProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, i) => (
-            <ProductCard key={i} {...product} showTag={i % 2 === 0} />
+          {products.map((product, index) => (
+            <ProductCard key={index} {...product} showTag={index % 2 === 0} />
           ))}
         </div>
       </Container>

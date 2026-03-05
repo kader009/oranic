@@ -6,11 +6,11 @@ const Marquee = () => {
   return (
     <div className="bg-primary text-white py-4 overflow-hidden whitespace-nowrap border-y border-white/10 h-[101px]">
       <div className="flex animate-marquee gap-12 w-max">
-        {[...Array(14)].map((_, i) => (
-          <div key={i} className="flex shrink-0 items-center gap-12">
-            {items.map((item, idx) => (
+        {[...Array(14)].map((_unused, repeatIndex) => (
+          <div key={repeatIndex} className="flex shrink-0 items-center gap-12">
+            {items.map((item, itemIndex) => (
               <span
-                key={idx}
+                key={itemIndex}
                 className="flex items-center gap-12 font-medium capitalize tracking-[1px] text-[40px]"
               >
                 <div className="relative w-[61px] h-[61px] shrink-0">

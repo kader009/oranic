@@ -44,14 +44,14 @@ const Categories = () => {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((cat, i) => (
+          {categories.map((category, index) => (
             <div
-              key={i}
+              key={index}
               className="group cursor-pointer relative aspect-3/4 rounded-3xl overflow-hidden shadow-sm"
             >
               <img
-                src={cat.image}
-                alt={cat.name}
+                src={category.image}
+                alt={category.name}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700"
               />
               {/* Overlay */}
@@ -81,7 +81,7 @@ const Categories = () => {
               <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                 <div className="w-[270px] h-[72px] bg-white/10 backdrop-blur-[25px] rounded-[12px] flex items-center justify-start px-6 text-white border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
                   <h3 className="text-lg md:text-xl font-bold uppercase tracking-widest">
-                    {cat.name}
+                    {category.name}
                   </h3>
                 </div>
               </div>

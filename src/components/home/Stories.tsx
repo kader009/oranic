@@ -48,8 +48,8 @@ const Stories = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {blogs.map((blog, i) => (
-            <div key={i} className="group cursor-pointer">
+          {blogs.map((blog, index) => (
+            <div key={index} className="group cursor-pointer">
               <div className="w-[410px] h-[446px] rounded-[32px] overflow-hidden mb-6">
                 <img
                   src={blog.image}
