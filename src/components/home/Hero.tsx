@@ -1,59 +1,69 @@
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ChevronRight, ArrowUpRight } from 'lucide-react';
 import Container from '../ui/Container';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-cream">
-      {/* Background Image */}
+    <section className="relative h-[960px] w-full overflow-hidden bg-cream">
+      {/* Background Image acts as a responsive size block */}
       <Image
         src="/assets/images/banner.svg"
         alt="Natural Beauty"
         fill
-        className="object-cover"
+        className="object-cover object-[center_80%]"
         priority
       />
 
-      {/* Overlay Content */}
-      <div className="absolute inset-0 bg-black/10 flex items-center">
-        <Container className="relative z-10">
-          <div className="max-w-xl text-white">
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 drop-shadow-lg">
+      {/* Overlay Content & Product Card */}
+      <div className="absolute inset-0 flex items-end pb-[40px]">
+        <Container className="relative z-10 w-full flex justify-between items-end">
+          {/* Left Side: Text Content */}
+          <div className=" text-white">
+            <h1 className="text-[80px] font-bold leading-[1.1] mb-[12px]">
               Natural Makeup <br /> For Radiant Skin
             </h1>
-            <p className="text-lg md:text-xl mb-8 opacity-90 max-w-md drop-shadow-md">
-              Discover our botanical-infused collection designed to enhance your
-              natural glow with pure ingredients.
+            <p className="text-[24px] font-regular mb-[20px]">
+              Ponds face wash for women removes all traces of pollution, dirt,
+              and <br /> impurities to give you a fresh and clean complexion.
             </p>
-            <button className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 transition-all transform hover:scale-105">
+            <button className="bg-primary hover:bg-primary/90 text-white w-[217px] h-[66px] rounded-[44px] flex items-center justify-center gap-2 transition-all transform hover:scale-105 font-medium text-[28px]">
               Shop Now
-              <ArrowRight size={20} />
+              <ChevronRight size={24} />
             </button>
           </div>
-        </Container>
-      </div>
 
-      {/* Product Card Overlay (Bottom Right-ish) */}
-      <div className="absolute right-[10%] bottom-[15%] hidden lg:block animate-fade-in-up">
-        <div className="bg-white p-4 rounded-2xl shadow-2xl flex items-center gap-4 max-w-[280px]">
-          <div className="w-20 h-20 bg-cream rounded-xl overflow-hidden relative">
-            <Image
-              src="/assets/images/product.png"
-              alt="Featured Product"
-              fill
-              className="object-contain p-2"
-            />
+          {/* Right Side: Product Card Overlay */}
+          <div className="hidden lg:block animate-fade-in-up">
+            <div className="bg-white p-[20px] rounded-[16px] w-[340px] h-[388px] flex flex-col shadow-2xl">
+              <div className="flex justify-between items-start mb-[20px]">
+                <div>
+                  <h3 className="text-[#1A1A1A] font-regular text-[24px] mb-1">
+                    Cucumber Extract
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[24px] font-bold text-[#1A1A1A]">
+                      $24.00
+                    </span>
+                    <span className="text-[16px] text-[#737373] line-through">
+                      $32.00
+                    </span>
+                  </div>
+                </div>
+                <button className="w-[48px] h-[48px] rounded-full border border-[#E5E5E5] flex items-center justify-center text-primary hover:bg-primary/5 transition-colors">
+                  <ArrowUpRight size={20} />
+                </button>
+              </div>
+              <div className="w-full flex-1 rounded-[12px] overflow-hidden relative border border-[#F5F5F5]">
+                <Image
+                  src="/assets/images/makeup2.svg"
+                  alt="Product"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
-          <div>
-            <p className="text-xs text-primary font-bold tracking-widest uppercase mb-1">
-              New Release
-            </p>
-            <h3 className="font-bold text-gray-900 leading-tight">
-              Hydrating Glow Serum
-            </h3>
-            <p className="text-primary font-bold mt-1">$45.00</p>
-          </div>
-        </div>
+        </Container>
       </div>
     </section>
   );

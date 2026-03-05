@@ -11,7 +11,7 @@ const Marquee = () => {
             {items.map((item, idx) => (
               <span
                 key={idx}
-                className="flex items-center gap-12 font-medium uppercase tracking-widest text-[40px]"
+                className="flex items-center gap-12 font-medium capitalize tracking-[1px] text-[40px]"
               >
                 <div className="relative w-[61px] h-[61px] shrink-0">
                   <Image
