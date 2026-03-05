@@ -1,6 +1,8 @@
 'use client';
+
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 import Container from '../ui/Container';
 import { faqs } from '@/src/data/faqsData';
 
@@ -11,38 +13,40 @@ const FAQ = () => {
     <section className="py-20">
       <Container className="flex flex-col lg:flex-row justify-between items-start gap-10">
         <div className="w-full lg:w-[652px] lg:h-[788px] flex flex-col">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-[56px] font-medium mb-[8px] text-[#222222] leading-tight">
             We've got the answers you need
-          </h2>
-          <p className="text-gray-600 mb-10">
+          </h1>
+          <p className="text-[#737373] text-[24px] mb-[40px] font-regular">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
 
-          <div className="space-y-4">
-            {faqs.map((faq, i) => (
+          <div className="flex flex-col gap-[16px]">
+            {faqs.map((faq, index) => (
               <div
-                key={i}
+                key={index}
                 className={`transition-all duration-300 rounded-[12px] w-full lg:w-[652px] ${
-                  openIndex === i
-                    ? 'min-h-[136px] bg-cream px-6 flex flex-col justify-center mb-4'
-                    : 'bg-transparent mb-4'
+                  openIndex === index
+                    ? 'min-h-[136px] bg-cream px-6 flex flex-col justify-center'
+                    : 'bg-transparent px-6'
                 }`}
               >
                 <button
-                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
                   className="w-full flex items-center justify-between text-left py-4 group"
                 >
                   <span
-                    className={`text-lg font-bold transition-colors ${
-                      openIndex === i
-                        ? 'text-[#1A1A1A]'
-                        : 'text-gray-900 group-hover:text-primary'
+                    className={`text-[24px] font-medium transition-colors ${
+                      openIndex === index
+                        ? 'text-[#222222]'
+                        : 'text-[#222222] group-hover:text-primary'
                     }`}
                   >
                     {faq.question}
                   </span>
-                  {openIndex === i ? (
+                  {openIndex === index ? (
                     <ChevronUp
                       size={24}
                       className="text-primary"
@@ -56,8 +60,8 @@ const FAQ = () => {
                     />
                   )}
                 </button>
-                {openIndex === i && (
-                  <div className="pb-6 text-gray-600 leading-relaxed animate-fade-in">
+                {openIndex === index && (
+                  <div className="pb-6 text-[#737373] text-[16px] font-regular leading-relaxed animate-fade-in">
                     {faq.answer}
                   </div>
                 )}
@@ -66,11 +70,12 @@ const FAQ = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block relative aspect-4/5 rounded-[3rem] overflow-hidden">
-          <img
+        <div className="hidden lg:block w-[588px] h-[788px] rounded-[40px] overflow-hidden shrink-0 relative">
+          <Image
             src="/assets/images/faq.svg"
             alt="FAQ Illustration"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
         </div>
       </Container>
