@@ -38,9 +38,9 @@ const Features = () => {
             ))}
           </div>
 
-          <div className="mt-12 flex items-center gap-8">
+          <div className="mt-12 flex items-center gap-[32px]">
             <button className="bg-primary text-white w-[192px] h-[66px] rounded-[44px] flex justify-center items-center font-medium text-[28px] hover:shadow-xl hover:shadow-primary/20 transition-all active:scale-95 cursor-pointer">
-              Learn More
+              Learn more
             </button>
 
             <div className="flex items-center">

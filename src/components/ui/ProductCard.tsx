@@ -1,11 +1,4 @@
-interface ProductCardProps {
-  name: string;
-  price: string;
-  category: string;
-  image: string;
-  rating?: number;
-  showTag?: boolean;
-}
+import { ProductCardProps } from '@/src/types/productCardProps';
 
 const ProductCard = ({
   name,
