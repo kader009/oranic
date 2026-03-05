@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -7,91 +7,61 @@ const Footer = () => {
       <div className="max-w-[1240px] flex flex-col mx-auto relative z-10">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(3,minmax(0,1fr))_374px] gap-[40px] mb-[40px]">
-          {/* Products */}
-          <div>
-            <h4 className="text-[24px] font-medium mb-8">Products</h4>
-            <ul className="space-y-4 text-[18px] font-light opacity-90">
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Shop all
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Skin care
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Face care
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Body care
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Hair care
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Information */}
-          <div>
-            <h4 className="text-[24px] font-medium mb-8">Information</h4>
-            <ul className="space-y-4 text-[18px] font-light opacity-90">
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  About us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* More */}
-          <div>
-            <h4 className="text-[24px] font-medium mb-8">More</h4>
-            <ul className="space-y-4 text-[18px] font-light opacity-90">
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Privacy policy
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Terms of service
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:opacity-70 transition-opacity">
-                  Shipping & returns
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Link Columns */}
+          {[
+            {
+              title: 'Products',
+              links: [
+                'Shop all',
+                'Skin care',
+                'Face care',
+                'Body care',
+                'Hair care',
+              ],
+            },
+            {
+              title: 'Information',
+              links: ['About us', 'Blog', 'Contact'],
+            },
+            {
+              title: 'More',
+              links: [
+                'Privacy policy',
+                'Terms of service',
+                'Shipping & returns',
+              ],
+            },
+          ].map((section, sectionIndex) => (
+            <div key={sectionIndex}>
+              <h4 className="text-[20px] font-medium mb-[20px]">
+                {section.title}
+              </h4>
+              <ul className="space-y-[20px] text-[16px] font-regular">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <Link
+                      href="#"
+                      className="hover:opacity-70 transition-opacity"
+                    >
+                      {link}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-[24px] mb-8">Subscribe to our newsletter</h4>
-            <div className="relative mb-8">
-              <div className="bg-white rounded-full p-1.5 flex items-center justify-between w-[374px] h-[72px]">
+            <h4 className="text-[24px] mb-[12px]">
+              Subscribe to our newsletter
+            </h4>
+            <div className="relative mb-[20px]">
+              <div className="bg-white rounded-[999px] pt-[12px] pr-[12px] pb-[12px] pl-[24px] flex items-center justify-between w-[374px] h-[72px]">
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="bg-transparent border-none outline-none text-[#5C6D1F] px-5 w-full text-[16px] placeholder:text-gray-400"
+                  className="bg-transparent border-none outline-none text-[#5C6D1F] w-[150px] h-[24px] text-[16px] placeholder:text-[#222222]"
                 />
                 <button className="bg-[#5C6D1F] text-white w-[110px] h-[48px] rounded-[44px] text-[16px] font-medium hover:bg-[#4A5819] transition-colors whitespace-nowrap flex items-center justify-center">
                   Subscribe
@@ -159,9 +129,9 @@ const Footer = () => {
 
         {/* Divider and Copyright Area */}
         <div>
-          <div className="w-full h-px bg-white/30" />
+          <div className="w-full h-px bg-[#E5E5E5]" />
           <div className="text-center">
-            <p className="text-[16px] font-light opacity-90 mt-[40px]">
+            <p className="text-[14px] font-regular mt-[40px]">
               Copyright © 2026 Oranic. All Right Reserved
             </p>
           </div>
@@ -169,7 +139,7 @@ const Footer = () => {
 
         {/* Huge Logo Watermark */}
         <div className="relative w-full flex justify-center pointer-events-none select-none z-0 h-fit mt-[40px]">
-          <h1 className="text-[300px] font-bold bg-[linear-gradient(180deg,#FFFFFF_37.75%,#607315_100%)] bg-clip-text text-transparent leading-[0.85] tracking-tight whitespace-nowrap scale-x-[1.02] transform origin-center">
+          <h1 className="text-[300px] font-bold bg-[linear-gradient(180deg,#FFFFFF_37.75%,#607315_100%)] bg-clip-text text-transparent leading-[0.85] tracking-[0.001em] whitespace-nowrap scale-x-[1.02] transform origin-center">
             ORANIC
           </h1>
         </div>
