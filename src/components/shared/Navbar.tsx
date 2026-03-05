@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { Search, ShoppingBag, User } from 'lucide-react';
+import { Search, ShoppingBag, User, ChevronDown } from 'lucide-react';
 import Container from '../ui/Container';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -13,22 +13,34 @@ const Navbar = () => {
 
         {/* Menu Links */}
         <div className="hidden md:flex items-center gap-8 text-gray-700">
-          <div className="group relative cursor-pointer hover:text-primary flex items-center gap-1 text-[24px] font-normal">
+          <Link
+            href="#"
+            className="group relative cursor-pointer hover:text-primary flex items-center gap-[8px] text-[24px] font-normal"
+          >
             Category
-            <span className="w-1.5 h-1.5 border-r border-b border-black rotate-45 mb-1 opacity-60"></span>
-          </div>
-          <div className="group relative cursor-pointer hover:text-primary flex items-center gap-1 text-[24px] font-normal">
+            <ChevronDown size={24} />
+          </Link>
+          <Link
+            href="#"
+            className="group relative cursor-pointer hover:text-primary flex items-center gap-[8px] text-[24px] font-normal"
+          >
             Shop
-            <span className="w-1.5 h-1.5 border-r border-b border-black rotate-45 mb-1 opacity-60"></span>
-          </div>
-          <div className="group relative cursor-pointer hover:text-primary flex items-center gap-1 text-[24px] font-normal">
+            <ChevronDown size={24} />
+          </Link>
+          <Link
+            href="#"
+            className="group relative cursor-pointer hover:text-primary flex items-center gap-[8px] text-[24px] font-normal"
+          >
             Offer
-            <span className="w-1.5 h-1.5 border-r border-b border-black rotate-45 mb-1 opacity-60"></span>
-          </div>
-          <div className="group relative cursor-pointer hover:text-primary flex items-center gap-1 text-[24px] font-normal">
+            <ChevronDown size={24} />
+          </Link>
+          <Link
+            href="#"
+            className="group relative cursor-pointer hover:text-primary flex items-center gap-[8px] text-[24px] font-normal"
+          >
             Pages
-            <span className="w-1.5 h-1.5 border-r border-b border-black rotate-45 mb-1 opacity-60"></span>
-          </div>
+            <ChevronDown size={24} />
+          </Link>
         </div>
 
         {/* Icons */}

@@ -26,7 +26,7 @@ const Hero = () => {
               Ponds face wash for women removes all traces of pollution, dirt,
               and <br /> impurities to give you a fresh and clean complexion.
             </p>
-            <button className="bg-primary hover:bg-primary/90 text-white w-[217px] h-[66px] rounded-[44px] flex items-center justify-center gap-2 transition-all transform hover:scale-105 font-medium text-[28px]">
+            <button className="bg-primary hover:bg-primary/90 text-white w-[217px] h-[66px] rounded-[44px] flex items-center justify-center gap-2 transition-all transform hover:scale-105 font-medium text-[28px] cursor-pointer">
               Shop Now
               <ChevronRight size={24} />
             </button>

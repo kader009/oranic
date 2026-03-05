@@ -78,7 +78,7 @@ const Categories = () => {
               </div>
 
               {/* Category Name Glassmorphism Box */}
-              <div className="absolute bottom-6 left-0 right-0 flex justify-center transform group-hover:-translate-y-1 transition-transform duration-500">
+              <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                 <div className="w-[270px] h-[72px] bg-white/10 backdrop-blur-[25px] rounded-[12px] flex items-center justify-start px-6 text-white border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
                   <h3 className="text-lg md:text-xl font-bold uppercase tracking-widest">
                     {cat.name}
