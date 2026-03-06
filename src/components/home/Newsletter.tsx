@@ -14,7 +14,7 @@ const Newsletter = () => {
               Redefine timeless beauty with our care
             </h1>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto md:mx-0">
-              <button className="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-secondary transition-all active:scale-95 shadow-xl cursor-pointer whitespace-nowrap flex items-center justify-center gap-2">
+              <button className="bg-white text-primary w-[217px] h-[66px] rounded-[44px] font-medium hover:bg-secondary transition-all active:scale-95 cursor-pointer whitespace-nowrap flex items-center justify-center gap-[10px] text-[28px]">
                 Shop Now
                 <ChevronRight size={20} />
               </button>
