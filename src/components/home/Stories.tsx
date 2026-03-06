@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import Container from '../ui/Container';
 import { blogs } from '@/src/data/blogsData';
@@ -48,13 +49,15 @@ const Stories = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {blogs.map((blog, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div className="w-[410px] h-[446px] rounded-[32px] overflow-hidden mb-6">
-                <img
+          {blogs.map((blog) => (
+            <div key={blog.id} className="group cursor-pointer">
+              <div className="rounded-[32px] overflow-hidden mb-6">
+                <Image
                   src={blog.image}
                   alt={blog.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  width={410}
+                  height={446}
+                  className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
 

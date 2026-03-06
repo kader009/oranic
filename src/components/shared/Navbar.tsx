@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Icons */}
-        <div className="flex-1 flex items-center justify-end gap-5">
+        <div className="flex-1 flex items-center justify-end gap-[32px]">
           <button className="text-gray-600 hover:text-primary cursor-pointer">
             <Search size={24} />
           </button>

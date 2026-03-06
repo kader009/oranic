@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ProductCardProps } from '@/src/types/productCardProps';
 
 const ProductCard = ({
@@ -8,16 +9,18 @@ const ProductCard = ({
 }: Omit<ProductCardProps, 'category' | 'rating'>) => {
   return (
     <div className="group bg-white rounded-[16px] p-2 pb-4 border border-[#E5E5E5]">
-      <div className="relative aspect-square rounded-2xl overflow-hidden bg-cream mb-2">
+      <div className="relative rounded-[12px] overflow-hidden bg-cream mb-2">
         {showTag && (
           <div className="absolute top-0 left-0 w-[93px] h-[42px] bg-primary z-10 rounded-br-[16px] flex items-center justify-center text-white font-bold">
             10%
           </div>
         )}
-        <img
+        <Image
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          width={286}
+          height={260}
+          className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
       </div>
 

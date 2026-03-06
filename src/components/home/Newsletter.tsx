@@ -49,11 +49,12 @@ const Newsletter = () => {
           </div>
 
           {/* Right Image */}
-          <div className="w-full lg:w-[628px] h-[400px] lg:h-[684px] rounded-[40px] overflow-hidden">
-            <img
+          <div className="relative w-full lg:w-[628px] h-[400px] lg:h-[684px] rounded-[40px] overflow-hidden">
+            <Image
               src="/assets/images/newsimage.svg"
               alt="Newsletter Promo"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
         </div>

@@ -14,9 +14,9 @@ const Makeup = () => {
         priority
       />
 
-      <Container className="relative h-full flex items-end justify-between pb-12">
+      <Container className="relative h-full flex items-end justify-between pb-[40px]">
         {/* Bottom Left: Product Card and Indicators */}
-        <div className="z-20 flex flex-col gap-8">
+        <div className="z-20 flex flex-col gap-[20px]">
           <div className="bg-white p-[20px] rounded-[16px] w-[439px] h-[388px] flex flex-col">
             <div className="flex justify-between items-start mb-[20px]">
               <div>
@@ -55,7 +55,7 @@ const Makeup = () => {
         </div>
 
         {/* Bottom Right: Hero Text */}
-        <div className="text-right z-10 mb-8">
+        <div className="text-right z-10">
           <h1 className="text-white text-[56px] font-medium leading-[1.1] max-w-[500px]">
             Natural Makeup <br /> For Radiant Skin
           </h1>

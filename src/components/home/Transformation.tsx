@@ -52,14 +52,14 @@ const Transformation = () => {
         {/* Labels Overlay */}
         <div className="absolute inset-0 pointer-events-none z-10">
           {/* Before Label */}
-          <div className="absolute md:flex hidden items-center justify-center bg-white w-[99.75px] h-[50px] top-[560px] left-[66.5px] px-[24px] py-[8px] gap-[10px] rounded-[8px] shadow-xl opacity-100">
+          <div className="absolute md:flex hidden items-center justify-center bg-white w-[99.75px] h-[50px] top-[560px] left-[66.5px] px-[24px] py-[8px] gap-[10px] rounded-[8px] opacity-100">
             <span className="text-primary font-medium capitalize text-[28px]">
               Before
             </span>
           </div>
 
           {/* After Label */}
-          <div className="absolute md:flex hidden items-center justify-center bg-white w-[89.78px] h-[50px] top-[560px] left-[1039.08px] px-[24px] py-[8px] gap-[10px] rounded-[8px] shadow-xl opacity-100">
+          <div className="absolute md:flex hidden items-center justify-center bg-white w-[89.78px] h-[50px] top-[560px] left-[1039.08px] px-[24px] py-[8px] gap-[10px] rounded-[8px] opacity-100">
             <span className="text-primary font-medium capitalize text-[28px]">
               After
             </span>

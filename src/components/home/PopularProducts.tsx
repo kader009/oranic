@@ -9,17 +9,17 @@ const PopularProducts = () => {
   return (
     <section className="py-20 bg-white">
       <Container>
-        <div className="mb-12">
-          <h1 className="text-[56px] font-medium mb-8 leading-tight">
+        <div className="mb-[40px]">
+          <h1 className="text-[56px] font-medium mb-[20px] leading-tight">
             Popular Products
           </h1>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="flex flex-wrap gap-[10px]">
-              {filters.map((filter, index) => (
+              {filters.map((filter, filterIndex) => (
                 <button
-                  key={index}
+                  key={filterIndex}
                   className={`w-[132px] h-[48px] rounded-[50px] text-[24px] font-medium transition-all cursor-pointer flex items-center justify-center whitespace-nowrap ${
-                    index === 0
+                    filterIndex === 0
                       ? 'bg-primary text-white'
                       : 'bg-[#F7F7F7] text-[#1A1A1A] hover:bg-primary/10'
                   }`}
@@ -38,8 +38,12 @@ const PopularProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, index) => (
-            <ProductCard key={index} {...product} showTag={index % 2 === 0} />
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              {...product}
+              showTag={product.id % 2 !== 0}
+            />
           ))}
         </div>
       </Container>

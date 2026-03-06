@@ -6,12 +6,10 @@ const Reviews = () => {
     <section className="py-20 px-20 bg-cream">
       <Container className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Left Side: Testimonial */}
-        <div className="order-2 lg:order-1 w-[497px] h-[773px] flex flex-col justify-start">
-          <h2 className="text-[56px] font-medium mb-[177px] mt-0">
-            Customer Reviews!
-          </h2>
-          <div className="relative">
-            <p className="text-[28px] font-regular text-[#1A1A1A] mb-8">
+        <div className="order-2 lg:order-1 w-[497px] h-[773px] flex flex-col justify-between">
+          <h2 className="text-[56px] font-medium">Customer Reviews!</h2>
+          <div className="relative flex flex-col gap-8">
+            <p className="text-[28px] font-regular text-[#1A1A1A]">
               “I’ve been using this cream for three weeks now, and the results
               are simply amazing. My skin has become more moisturized, supple,
               and radiant. The texture is light, absorbs quickly, and doesn’t
@@ -27,7 +25,9 @@ const Reviews = () => {
                 />
               </div>
               <div>
-                <h4 className="font-medium text-[28px] text-[#222222]">Ashley</h4>
+                <h4 className="font-medium text-[28px] text-[#222222]">
+                  Ashley
+                </h4>
                 <div className="flex items-center gap-1">
                   <svg
                     width="20"
@@ -42,42 +42,42 @@ const Reviews = () => {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Navigation Buttons from Categories */}
-            <div className="flex gap-[10px] mt-[177px]">
-              <button className="w-[48px] h-[48px] rounded-[35px] border border-[#E5E5E5] bg-transparent text-[#1A1A1A] flex items-center justify-center cursor-pointer hover:border-primary hover:text-primary transition-all duration-300 group">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
-                  />
-                </svg>
-              </button>
-              <button className="w-[48px] h-[48px] rounded-[35px] border border-[#E5E5E5] bg-transparent text-[#1A1A1A] flex items-center justify-center cursor-pointer hover:border-primary hover:text-primary transition-all duration-300 group">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                  />
-                </svg>
-              </button>
-            </div>
+          {/* Navigation Buttons */}
+          <div className="flex gap-[10px]">
+            <button className="w-[48px] h-[48px] rounded-[35px] border border-[#E5E5E5] bg-transparent text-[#1A1A1A] flex items-center justify-center cursor-pointer hover:border-primary hover:text-primary transition-all duration-300 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+                />
+              </svg>
+            </button>
+            <button className="w-[48px] h-[48px] rounded-[35px] border border-[#E5E5E5] bg-transparent text-[#1A1A1A] flex items-center justify-center cursor-pointer hover:border-primary hover:text-primary transition-all duration-300 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </button>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import { Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#5C6D1F] text-white pt-[40px] pb-[40px] pl-[80px] pr-[120px] overflow-hidden relative">
+    <footer className="bg-[#5C6D1F] text-white pt-[80px] pb-[40px] pl-[80px] pr-[120px] overflow-hidden relative">
       <div className="max-w-[1240px] flex flex-col mx-auto relative z-10">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[repeat(3,minmax(0,1fr))_374px] gap-[40px] mb-[40px]">
@@ -76,8 +76,8 @@ const Footer = () => {
                 className="w-11 h-11 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-110"
               >
                 <svg
-                  width="28"
-                  height="28"
+                  width="24"
+                  height="24"
                   viewBox="0 0 44 44"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,8 +100,8 @@ const Footer = () => {
                 className="w-11 h-11 rounded-full bg-white flex items-center justify-center transition-transform hover:scale-110"
               >
                 <svg
-                  width="44"
-                  height="44"
+                  width="46"
+                  height="46"
                   viewBox="0 0 24 24"
                   fill="#25D366"
                   xmlns="http://www.w3.org/2000/svg"

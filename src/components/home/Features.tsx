@@ -16,9 +16,9 @@ const Features = () => {
           </h1>
 
           <div className="grid sm:grid-cols-2 gap-[24px]">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div
-                key={index}
+                key={feature.id}
                 className="w-[302px] h-[212px] bg-white rounded-[12px] p-[16px] flex flex-col justify-between"
               >
                 <div className="w-[52px] h-[54px] bg-cream flex items-center justify-center rounded-[8px]">

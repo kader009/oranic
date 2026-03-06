@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Container from '../ui/Container';
 import { categories } from '@/src/data/categoryData';
 
@@ -44,15 +45,17 @@ const Categories = () => {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <div
-              key={index}
-              className="group cursor-pointer relative aspect-3/4 rounded-3xl overflow-hidden shadow-sm"
+              key={category.id}
+              className="group cursor-pointer relative rounded-[16px] overflow-hidden shadow-sm"
             >
-              <img
+              <Image
                 src={category.image}
                 alt={category.name}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700"
+                width={302}
+                height={400}
+                className="w-full object-cover transition-transform duration-700"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent opacity-60 transition-opacity duration-500" />
