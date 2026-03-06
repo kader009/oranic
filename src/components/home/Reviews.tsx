@@ -9,7 +9,7 @@ const Reviews = () => {
         <div className="order-2 lg:order-1 w-[497px] h-[773px] flex flex-col justify-between">
           <h2 className="text-[56px] font-medium">Customer Reviews!</h2>
           <div className="relative flex flex-col gap-8">
-            <p className="text-[28px] font-regular text-[#1A1A1A]">
+            <p className="text-[28px] font-regular text-[#222222]">
               “I’ve been using this cream for three weeks now, and the results
               are simply amazing. My skin has become more moisturized, supple,
               and radiant. The texture is light, absorbs quickly, and doesn’t
@@ -25,14 +25,12 @@ const Reviews = () => {
                 />
               </div>
               <div>
-                <h4 className="font-medium text-[28px] text-[#222222]">
-                  Ashley
-                </h4>
+                <h4 className="font-medium text-[28px]">Ashley</h4>
                 <div className="flex items-center gap-1">
                   <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    viewBox="3 3 18 18"
                     fill="currentColor"
                     className="text-primary"
                   >

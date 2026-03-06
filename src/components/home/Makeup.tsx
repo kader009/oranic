@@ -23,7 +23,7 @@ const Makeup = () => {
                 <h3 className="text-[#1A1A1A] font-regular text-[24px] mb-1">
                   Cucumber Extract
                 </h3>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-[4px]">
                   <span className="text-[24px] font-bold text-[#1A1A1A]">
                     $24.00
                   </span>
@@ -47,10 +47,10 @@ const Makeup = () => {
           </div>
 
           <div className="flex gap-3 z-10 w-full">
-            <div className="h-[8px] flex-1 bg-primary rounded-full" />
-            <div className="h-[8px] flex-1 bg-white rounded-full" />
-            <div className="h-[8px] flex-1 bg-white rounded-full" />
-            <div className="h-[8px] flex-1 bg-white rounded-full" />
+            <div className="h-[12px] w-[100px] flex-1 bg-primary rounded-full" />
+            <div className="h-[12px] w-[100px] flex-1 bg-white rounded-[12px]" />
+            <div className="h-[12px] w-[100px] flex-1 bg-white rounded-[12px]" />
+            <div className="h-[12px] w-[100px] flex-1 bg-white rounded-[12px]" />
           </div>
         </div>
 
