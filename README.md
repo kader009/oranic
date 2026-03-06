@@ -49,7 +49,7 @@
 
 Make sure you have the following installed:
 
-- [Node.js](https://nodejs.org) (v18 or higher)
+- [Node.js](https://nodejs.org) (v20 or higher)
 - [npm](https://www.npmjs.com), [yarn](https://yarnpkg.com), [pnpm](https://pnpm.io), or [bun](https://bun.sh)
 
 ### Installation
