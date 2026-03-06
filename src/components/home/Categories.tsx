@@ -82,7 +82,7 @@ const Categories = () => {
 
               {/* Category Name Glassmorphism Box */}
               <div className="absolute bottom-6 left-0 right-0 flex justify-center">
-                <div className="w-[270px] h-[72px] bg-white/10 backdrop-blur-[25px] rounded-[12px] flex items-center justify-start px-6 text-white border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+                <div className="w-[270px] h-[72px] bg-white/10 backdrop-blur-[25px] rounded-[12px] flex items-center justify-start px-6 text-white">
                   <h3 className="text-lg md:text-xl font-bold uppercase tracking-widest">
                     {category.name}
                   </h3>

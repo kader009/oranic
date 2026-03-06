@@ -24,7 +24,7 @@ const ProductCard = ({
         />
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-[4px]">
         <h3 className="text-[20px] font-normal text-[#1A1A1A] group-hover:text-primary transition-colors">
           {name}
         </h3>
